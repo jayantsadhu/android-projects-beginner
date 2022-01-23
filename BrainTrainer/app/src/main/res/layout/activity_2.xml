@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Time"
+        android:background="#F8E752"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mathView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Math"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/scoreTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/timerTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Score"
+        android:background="#F8E752"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:columnCount="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="1">
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:background="#F8E752"
+            android:textColor="#455A64"
+            android:text="Time"
+            android:textSize="25sp"
+            app:layout_column="0"
+            app:layout_columnWeight="0.5"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/mathView"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textColor="#455A64"
+            android:text="Math"
+            android:textSize="25sp"
+            app:layout_columnWeight="2"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:gravity="center"
+            android:paddingEnd="8dp"
+            android:text="Score"
+            android:background="#F8E752"
+            android:textColor="#455A64"
+            android:textSize="25sp"
+            app:layout_columnWeight="0.5"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+    </androidx.gridlayout.widget.GridLayout-->
+    <!--LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_gravity="left"
+            android:text="Time"
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/textView2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Math"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/textView"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Score"
+            android:textSize="25sp" />
+    </LinearLayout-->
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="60dp"
+        app:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="2">
+
+        <TextView
+            android:id="@+id/textViewOp1"
+            android:background="@color/green"
+            android:gravity="center"
+            android:onClick="clickedOption"
+            android:text="Option 1"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/textViewOp2"
+            android:background="#ED4949"
+            android:gravity="center"
+            android:onClick="clickedOption"
+            android:text="Option 2"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/textViewOp3"
+            android:background="#ABB605"
+            android:gravity="center"
+            android:onClick="clickedOption"
+            android:text="Option 3"
+            android:textColor="#455A64"
+            android:textSize="25sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/textViewOp4"
+            android:background="#35CFCF"
+            android:gravity="center"
+            android:onClick="clickedOption"
+            android:text="Option 4"
+            android:textColor="#616161"
+            android:textSize="25sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/solnStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="CorrectOrNot!"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
+
+    <Button
+        android:id="@+id/startButtonView"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#545355"
+        android:onClick="startTimer"
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solnStatusTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

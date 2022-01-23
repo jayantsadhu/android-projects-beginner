@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/profile_pic_desc"
+            android:src="@drawable/pic1" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/time_view"
+        android:layout_toEndOf="@+id/card_view"
+        android:ellipsize="end"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:text="@string/name_view"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/message_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_view"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@+id/card_view"
+        android:ellipsize="end"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:text="@string/message_view"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/time" />
+</RelativeLayout>

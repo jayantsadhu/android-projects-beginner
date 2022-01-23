@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Whatsapp Front Page</string>
+    <string name="name_view">Jayant Kumar Sadhu and coworkers</string>
+    <string name="message_view">Someone has sent you a stickeryou might be interested</string>
+    <string name="time">09:16 pm</string>
+    <string name="profile_pic_desc">Profile Picture</string>
+</resources>
